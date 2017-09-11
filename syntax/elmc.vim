@@ -19,6 +19,6 @@ highlight link elmcPointer Constant
 
 syntax include @elm syntax/elm.vim
 syntax region elmcCodeBlock start=/^\(\d\)*|.\zs/ start=/^    / end=/\_$/ contains=@elm
-highlight link elmcCodeBlock SpecialComment
+highlight link elmcCodeBlock Normal
 
 let b:current_syntax = "elmc"
