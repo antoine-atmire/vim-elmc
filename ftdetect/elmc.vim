@@ -4,3 +4,7 @@ autocmd BufNewFile,BufRead *.elmc set filetype=elmc
 nnoremap gF = ?---<cr>WyE<c-o>Pa:<esc>0gFdf:
 " might as well use gf as its easier to type
 nmap gf gF
+
+" jump to a line that starts with a digit
+nnoremap ]e /^\d<cr>
+nnoremap [e ?^\d<cr>
