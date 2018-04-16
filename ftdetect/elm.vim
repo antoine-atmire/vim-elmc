@@ -16,4 +16,4 @@ nnoremap [1;5w :e compiler.elmc<cr>
 nnoremap <leader>st 0mMyiw:buffer compiler.elmc<cr>gg/<c-r>" :<cr>Y`MP
 
 " write the files, run elm-make and update the compiler.elmc buffer
-nnoremap <leader>am :wa<cr>:silent make<cr><c-l>
+nnoremap <leader>am :wa<cr>:silent make!<cr><c-l>
