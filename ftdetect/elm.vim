@@ -1,10 +1,5 @@
-augroup localvimrc
-  autocmd!
-  "clears all events so they don't happen twice when reloading vimrc
-augroup END
-
-autocmd localvimrc FileType elm nnoremap <leader>ct :AsyncRun ctags -R **/*.elm<cr>
-autocmd localvimrc FileType elm nnoremap <leader>pe :ElmFormat<cr>
+nnoremap <leader>ct :AsyncRun ctags -R **/*.elm<cr>
+nnoremap <leader>pe :ElmFormat<cr>
 
 " ctrl-7 opens the compiler.elmc buffer
 nnoremap  :e compiler.elmc<cr>
