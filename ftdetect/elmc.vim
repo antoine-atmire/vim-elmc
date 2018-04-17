@@ -6,5 +6,5 @@ nnoremap gF = ?---<cr>WyE<c-o>Pa:<esc>0gFdf:
 nmap gf gF
 
 " jump to a line that starts with a digit
-nnoremap ]e /^\d<cr>
-nnoremap [e ?^\d<cr>
+nnoremap ]] /\n\n\d/2<cr>
+nnoremap [[ ?\n\n\d?2<cr>
