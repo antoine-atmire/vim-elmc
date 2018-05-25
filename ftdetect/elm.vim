@@ -1,4 +1,4 @@
-nnoremap <leader>ct :AsyncRun ctags -R **/*.elm<cr>
+" nnoremap <leader>ct :AsyncRun ctags -R **/*.elm<cr>
 nnoremap <leader>pe :ElmFormat<cr>
 
 nnoremap <leader>6 :e compiler.elmc<cr>
@@ -21,4 +21,4 @@ endfunction
 nnoremap <leader>st :call InsertTypeAnnotation()<cr>
 
 " write the files, run elm-make and update the compiler.elmc buffer
-nnoremap <leader>am :terminal ++curwin elm-make --warn Main.elm<cr>
+nnoremap <leader>am :w<cr>:terminal ++curwin elm-make --warn Main.elm<cr>
