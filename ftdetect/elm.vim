@@ -8,7 +8,7 @@ nnoremap [1;5w :e compiler.elmc<cr>
 
 " put your cursor on a function without type annotation
 " this mapping will copy-paste it from compiler.elmc
-function InsertTypeAnnotation()
+function! InsertTypeAnnotation()
     " move to start of the line and set the M mark
     normal! 0mM
     " yank the function name
@@ -24,4 +24,4 @@ endfunction
 nnoremap <leader>st :call InsertTypeAnnotation()<cr>
 
 " write the files, run elm-make and update the compiler.elmc buffer
-nnoremap <leader>am :wa<cr>:silent make!<cr><c-l>
+nnoremap <leader>am :terminal ++curwin elm-make --warn Main.elm<cr>

@@ -27,6 +27,3 @@ nnoremap gf :call GoToCitedSource()<cr>
 " jump to a line that starts with a digit
 nnoremap ]] /\n\n\d/2<cr>
 nnoremap [[ ?\n\n\d?2<cr>
-
-nnoremap <leader>am :terminal ++curwin elm-make --warn Main.elm<cr>
-nnoremap <leader>at :set modifiable filetype=elmc<cr>
