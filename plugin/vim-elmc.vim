@@ -1,1 +1,1 @@
-nnoremap <leader>at :set modifiable filetype=elmc<cr>
+nnoremap <leader>at ggyG:edit compiler.elmc<cr>ggVGp

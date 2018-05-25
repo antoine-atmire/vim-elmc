@@ -1,10 +1,7 @@
 nnoremap <leader>ct :AsyncRun ctags -R **/*.elm<cr>
 nnoremap <leader>pe :ElmFormat<cr>
 
-" ctrl-7 opens the compiler.elmc buffer
-nnoremap  :e compiler.elmc<cr>
-" this is ctrl-7 on my cygwin setup
-nnoremap [1;5w :e compiler.elmc<cr>
+nnoremap <leader>6 :e compiler.elmc<cr>
 
 " put your cursor on a function without type annotation
 " this mapping will copy-paste it from compiler.elmc
