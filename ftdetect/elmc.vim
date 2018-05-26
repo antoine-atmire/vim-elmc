@@ -25,5 +25,5 @@ nnoremap gF :call GoToCitedSource()<cr>
 nnoremap gf :call GoToCitedSource()<cr>
 
 " jump to a line that starts with a digit
-nnoremap ]] /\n\n\d/2<cr>
-nnoremap [[ ?\n\n\d?2<cr>
+nnoremap ]] /\n\n\s*\d/2<cr>
+nnoremap [[ ---?\n\n\s*\d?2<cr>
