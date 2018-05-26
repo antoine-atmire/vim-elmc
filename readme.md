@@ -9,5 +9,4 @@ Features:
 This also contains mappings I use for all my elm projects, because I'm the only
 one using this plugin anyway :-)
 
-The `<leader>am` opens a `:terminal` for `elm-make`. (vim 8.1)
-Follow up with `<leader>at` to enabled this plugin's features.
+The `<leader>am` opens the `compiler.elmc` buffer and puts the output of `elm-make` there.

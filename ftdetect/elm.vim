@@ -21,4 +21,4 @@ endfunction
 nnoremap <leader>st :call InsertTypeAnnotation()<cr>
 
 " write the files, run elm-make and update the compiler.elmc buffer
-nnoremap <leader>am :w<cr>:terminal ++curwin elm-make --warn Main.elm<cr>
+nnoremap <leader>am :w<cr>:edit compiler.elmc<cr>ggdG:r!elm-make Main.elm --warn --debug<cr>
