@@ -21,4 +21,5 @@ endfunction
 nnoremap <leader>st :call InsertTypeAnnotation()<cr>
 
 " write the files, run elm-make and update the compiler.elmc buffer
-nnoremap <leader>am :w<cr>:edit compiler.elmc<cr>ggdG:r!elm-make Main.elm --warn --debug<cr>
+nnoremap <leader>am :w<cr>:edit compiler.elmc<cr>ggdG:silent read! elm-make Main.elm --warn --debug<cr>
+nnoremap <leader>aj :w<cr>:edit compiler.elmc<cr>ggdG:silent read! elm-make Main.elm --warn --debug --output=app.js<cr>
