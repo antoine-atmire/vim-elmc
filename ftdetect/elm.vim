@@ -7,7 +7,7 @@ inoremap ; <space>-><space>
 inoremap $ <bar>><space>
 inoremap # <<bar><space>
 
-" nnoremap <leader>ct :AsyncRun ctags -R **/*.elm<cr>
+nnoremap <leader>ct :silent !ctags -R **/*.elm<cr><c-l>
 nnoremap <leader>pe :ElmFormat<cr>
 
 nnoremap <leader>6 :e compiler.elmc<cr>
