@@ -1,5 +1,10 @@
 autocmd BufNewFile,BufRead *.elmc set filetype=elmc
 
+augroup elmcgroup
+  autocmd!
+  "clears all events so they don't happen twice when reloading 
+augroup END
+
 function! GoToCitedSource()
     " Error messages look like this:
     "
@@ -20,10 +25,10 @@ function! GoToCitedSource()
 endfunction
 
 " make gF work with the line numbers from the error messages
-nnoremap gF :call GoToCitedSource()<cr>
+autocmd elmcgroup FileType elmc nnoremap <buffer> gF :call GoToCitedSource()<cr>
 " might as well use gf as its easier to type
-nnoremap gf :call GoToCitedSource()<cr>
+autocmd elmcgroup FileType elmc nnoremap <buffer> gf :call GoToCitedSource()<cr>
 
 " jump to a line that starts with a digit
-nnoremap ]] /\n\n\s*\d/2<cr>
-nnoremap [[ ---?\n\n\s*\d?2<cr>
+autocmd elmcgroup FileType elmc nnoremap <buffer> ]] /\n\n\s*\d/2<cr>
+autocmd elmcgroup FileType elmc nnoremap <buffer> [[ ---?\n\n\s*\d?2<cr>

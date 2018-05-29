@@ -2,13 +2,19 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+augroup elmgroup
+  autocmd!
+  "clears all events so they don't happen twice when reloading 
+augroup END
+
+
 " use <c-v> if you need to insert these literally
-inoremap ; <space>-><space>
-inoremap $ <bar>><space>
-inoremap # <<bar><space>
+autocmd elmgroup FileType elm inoremap <buffer> ; <space>-><space>
+autocmd elmgroup FileType elm inoremap <buffer> $ <bar>><space>
+autocmd elmgroup FileType elm inoremap <buffer> # <<bar><space>
 
 nnoremap <leader>ct :silent !ctags -R **/*.elm<cr><c-l>
-nnoremap <leader>pe :ElmFormat<cr>
+autocmd elmgroup FileType elm nnoremap <buffer> <leader>pe :ElmFormat<cr>
 
 nnoremap <leader>6 :e compiler.elmc<cr>
 
@@ -27,9 +33,8 @@ function! InsertTypeAnnotation()
     normal! Y`MP
 endfunction
 
-nnoremap <leader>st :call InsertTypeAnnotation()<cr>
+autocmd elmgroup FileType elm nnoremap <buffer> <leader>st :call InsertTypeAnnotation()<cr>
 
 " write the files, run elm-make and update the compiler.elmc buffer
-nnoremap <leader>am :w<cr>:edit compiler.elmc<cr>ggdG:silent read! elm-make Main.elm --warn --debug<cr>
-nnoremap <leader>aj :w<cr>:edit compiler.elmc<cr>ggdG:silent read! elm-make Main.elm --warn --debug --output=app.js<cr>
-
+nnoremap <leader>am :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm-make Main.elm --warn --debug<cr>
+nnoremap <leader>aj :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm-make Main.elm --warn --debug --output=app.js<cr>
