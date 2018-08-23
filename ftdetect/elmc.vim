@@ -30,5 +30,5 @@ autocmd elmcgroup FileType elmc nnoremap <buffer> gF :call GoToCitedSource()<cr>
 autocmd elmcgroup FileType elmc nnoremap <buffer> gf :call GoToCitedSource()<cr>
 
 " jump to a line that starts with a digit
-autocmd elmcgroup FileType elmc nnoremap <buffer> ]] /\n\n\s*\d/2<cr>
-autocmd elmcgroup FileType elmc nnoremap <buffer> [[ ---?\n\n\s*\d?2<cr>
+autocmd elmcgroup FileType elmc nnoremap <buffer> ]] /\n\n\s*\d/2<cr>:let @/=''<cr>
+autocmd elmcgroup FileType elmc nnoremap <buffer> [[ ---?\n\n\s*\d?2<cr>:let @/=''<cr>
