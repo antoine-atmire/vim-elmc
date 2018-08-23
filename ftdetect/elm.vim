@@ -39,4 +39,4 @@ autocmd elmgroup FileType elm nnoremap <buffer> [[ ---?\n\n--?e<cr>zt:let @/=''<
 
 " write the files, run elm-make and update the compiler.elmc buffer
 autocmd elmgroup FileType elm nnoremap <leader>am :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm make Main.elm --warn --debug<cr>:e#<cr>
-autocmd elmgroup FileType elm nnoremap <leader>aj :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm-make Main.elm --warn --debug --output=app.js<cr>:e#<cr>
+autocmd elmgroup FileType elm nnoremap <leader>aj :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm make Main.elm --warn --debug --output=app.js<cr>:e#<cr>
