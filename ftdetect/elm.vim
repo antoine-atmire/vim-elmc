@@ -16,7 +16,7 @@ autocmd elmgroup FileType elm inoremap <buffer> # <<bar><space>
 nnoremap <leader>ct :silent !ctags -R **/*.elm<cr><c-l>
 autocmd elmgroup FileType elm nnoremap <buffer> <leader>pe :ElmFormat<cr>
 
-nnoremap <leader>6 :e compiler.elmc<cr>
+nnoremap <leader>6 :e compiler.elmc<cr>6gg
 
 " put your cursor on a function without type annotation
 " this mapping will copy-paste it from compiler.elmc
