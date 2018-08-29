@@ -15,6 +15,7 @@ autocmd elmgroup FileType elm inoremap <buffer> # <<bar><space>
 
 nnoremap <leader>ct :silent !ctags -R **/*.elm<cr><c-l>
 autocmd elmgroup FileType elm nnoremap <buffer> <leader>pe :ElmFormat<cr>
+autocmd elmgroup FileType elm nnoremap <buffer> <leader>pr mMggf(ci(..<esc>:ElmFormat<cr>`M
 
 nnoremap <leader>6 :e compiler.elmc<cr>6gg
 
