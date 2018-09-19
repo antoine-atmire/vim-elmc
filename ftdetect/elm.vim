@@ -43,6 +43,6 @@ autocmd elmgroup FileType elm nnoremap <leader>am :wa<cr>:edit compiler.elmc<cr>
 autocmd elmgroup FileType elm nnoremap <leader>aj :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm make src/Main.elm --debug --output=app.js<cr>:e#<cr>
 
 " setup <c-x><c-k> to complete library functions from a specific module
-setlocal iskeyword+=.
-setlocal dictionary=~/.elm/0.19.0/dictionary
+set iskeyword+=.
+set dictionary=~/.elm/0.19.0/dictionary
 autocmd elmgroup FileType elm nnoremap <leader>ak :!~/dotfiles/bin/elm-dictionary.zsh > ~/.elm/0.19.0/dictionary<cr>
