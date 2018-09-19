@@ -41,3 +41,8 @@ autocmd elmgroup FileType elm nnoremap <buffer> [[ ---?\n\n--?e<cr>zt:let @/=''<
 " write the files, run elm-make and update the compiler.elmc buffer
 autocmd elmgroup FileType elm nnoremap <leader>am :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm make src/Main.elm --debug<cr>:e#<cr>
 autocmd elmgroup FileType elm nnoremap <leader>aj :wa<cr>:edit compiler.elmc<cr>ggdG:silent read! elm make src/Main.elm --debug --output=app.js<cr>:e#<cr>
+
+" setup <c-x><c-k> to complete library functions from a specific module
+setlocal iskeyword+=.
+setlocal dictionary=~/.elm/0.19.0/dictionary
+autocmd elmgroup FileType elm nnoremap <leader>ak :!~/dotfiles/bin/elm-dictionary.zsh > ~/.elm/0.19.0/dictionary<cr>
