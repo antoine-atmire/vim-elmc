@@ -29,7 +29,7 @@ autocmd elmgroup FileType elm nnoremap <buffer> <leader>pr mM:call ExposeAll()<c
 nnoremap <leader>6 :e compiler.elmc<cr>6gg
 
 " put your cursor on a function without type annotation
-" this mapping will copy-paste it from compiler.elmc
+" this mapping will get the annotation from elm repl
 function! InsertTypeAnnotation()
     " yank the function name
     normal! 0"fyiw
