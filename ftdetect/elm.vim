@@ -43,7 +43,7 @@ function! InsertTypeAnnotation()
     " execute elm repl
     execute "normal! vip:!elm repl --no-colors\<cr>"
     " clean up output
-    normal! 3dddt:"fP+2dd-
+    execute "normal! 3ddv/:\<cr>hh\"fP+2dd-"
 endfunction
 
 autocmd elmgroup FileType elm nnoremap <buffer> <leader>st :call InsertTypeAnnotation()<cr>
