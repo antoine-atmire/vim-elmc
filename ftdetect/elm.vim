@@ -16,7 +16,8 @@ autocmd elmgroup FileType elm inoremap <buffer> $ <bar>><space>
 autocmd elmgroup FileType elm inoremap <buffer> # <<bar><space>
 
 " ctags
-nnoremap <leader>ct :silent !ctags -R **/*.elm<cr>:silent !ctags -a ~/.elm/0.19.0/package/**/*.elm<cr><c-l>
+nnoremap <leader>ct :silent !ctags -R **/*.elm<cr><c-l>
+"nnoremap <leader>ct :silent !ctags ~/.elm/0.19.1/packages/**/*.elm<cr>:silent !ctags -a -R **/*.elm<cr><c-l>
 
 " I like to format on command, not on save
 autocmd elmgroup FileType elm nnoremap <buffer> <leader>pe :ElmFormat<cr>
