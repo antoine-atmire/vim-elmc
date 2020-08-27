@@ -74,5 +74,11 @@ nnoremap <leader>6 :e compiler.elmc<cr>6gg
 "
 " setup <c-x><c-k> to complete library functions from a specific module
 " setlocal iskeyword+=.
-" setlocal dictionary=~/.elm/0.19.0/dictionary
-" autocmd elmgroup FileType elm nnoremap <leader>ak :!~/dotfiles/bin/elm-dictionary.zsh > ~/.elm/0.19.0/dictionary<cr>
+" setlocal dictionary=~/.elm/0.19.1/dictionary
+" autocmd elmgroup FileType elm nnoremap <leader>ak :!~/dotfiles/bin/elm-dictionary.zsh > ~/.elm/0.19.1/dictionary<cr>
+
+autocmd elmgroup FileType elm command! FuzzyElmFunction call fzf#run({
+            \   'source':  'cat ~/.elm/0.19.1/dictionary',
+            \   'sink':    'norm i',
+            \ })
+autocmd elmgroup FileType elm nnoremap <leader>fk :FuzzyElmFunction<cr>
